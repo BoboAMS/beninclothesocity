@@ -1,0 +1,1076 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BeninClotheSociety - Mode Africaine Élégante</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #008751; /* Vert béninois */
+            --secondary: #FCD116; /* Jaune béninois */
+            --accent: #E8112D; /* Rouge béninois */
+            --dark: #1a1a1a;
+            --light: #f8f8f8;
+            --gray: #e0e0e0;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--dark);
+            background-color: var(--light);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .top-bar {
+            background-color: var(--primary);
+            color: white;
+            padding: 8px 0;
+            font-size: 0.9rem;
+        }
+
+        .top-bar-content {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo h1 {
+            font-size: 1.8rem;
+            color: var(--primary);
+            font-weight: 700;
+        }
+
+        .logo span {
+            color: var(--accent);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 30px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            font-size: 1.1rem;
+            position: relative;
+            transition: var(--transition);
+        }
+
+        nav ul li a:hover {
+            color: var(--primary);
+        }
+
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary);
+            transition: var(--transition);
+        }
+
+        nav ul li a:hover::after {
+            width: 100%;
+        }
+
+        .icons {
+            display: flex;
+            gap: 20px;
+        }
+
+        .icons a {
+            color: var(--dark);
+            font-size: 1.3rem;
+            transition: var(--transition);
+        }
+
+        .icons a:hover {
+            color: var(--primary);
+            transform: translateY(-3px);
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 80vh;
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1618519764620-7403abdbdfe9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .hero h2 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: var(--primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: var(--transition);
+            border: 2px solid var(--primary);
+        }
+
+        .btn:hover {
+            background-color: transparent;
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid white;
+            margin-left: 15px;
+        }
+
+        .btn-outline:hover {
+            background-color: white;
+            color: var(--primary);
+        }
+
+        /* Categories Section */
+        .section {
+            padding: 80px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            color: var(--primary);
+            position: relative;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+
+        .section-header h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--secondary);
+        }
+
+        .section-header p {
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .categories {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .category-card {
+            position: relative;
+            height: 300px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: var(--transition);
+        }
+
+        .category-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+
+        .category-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .category-card:hover img {
+            transform: scale(1.1);
+        }
+
+        .category-info {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px;
+            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+            color: white;
+        }
+
+        .category-info h3 {
+            font-size: 1.5rem;
+            margin-bottom: 5px;
+        }
+
+        /* Featured Products */
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+            gap: 30px;
+        }
+
+        .product-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: var(--transition);
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+
+        .product-image {
+            height: 250px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .product-card:hover .product-image img {
+            transform: scale(1.05);
+        }
+
+        .product-badge {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background-color: var(--accent);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 3px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .product-info {
+            padding: 20px;
+        }
+
+        .product-info h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .product-info .price {
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+        }
+
+        .product-info .old-price {
+            color: #999;
+            text-decoration: line-through;
+            margin-left: 10px;
+            font-size: 1rem;
+        }
+
+        .rating {
+            color: var(--secondary);
+            margin-bottom: 15px;
+        }
+
+        /* About Section */
+        .about {
+            background-color: #f0f0f0;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-image {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .about-text h2 {
+            font-size: 2.2rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+
+        .about-text p {
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        .features {
+            margin-top: 30px;
+        }
+
+        .feature {
+            display: flex;
+            margin-bottom: 20px;
+        }
+
+        .feature-icon {
+            background-color: var(--primary);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            background: linear-gradient(rgba(0, 135, 81, 0.9), rgba(0, 135, 81, 0.9)), url('https://images.unsplash.com/photo-1518893494013-481c1d8ed3fd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80') center/cover fixed;
+            color: white;
+            text-align: center;
+        }
+
+        .testimonials .section-header h2 {
+            color: white;
+        }
+
+        .testimonials .section-header h2::after {
+            background-color: var(--secondary);
+        }
+
+        .testimonial-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .testimonial {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 10px;
+            margin: 30px 0;
+            backdrop-filter: blur(10px);
+        }
+
+        .testimonial p {
+            font-style: italic;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .client {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .client img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin-right: 15px;
+            object-fit: cover;
+            border: 3px solid var(--secondary);
+        }
+
+        .client-info h4 {
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+        }
+
+        /* Newsletter */
+        .newsletter {
+            background-color: var(--secondary);
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .newsletter-content {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .newsletter h2 {
+            color: var(--dark);
+            font-size: 2.2rem;
+            margin-bottom: 15px;
+        }
+
+        .newsletter p {
+            margin-bottom: 30px;
+            color: var(--dark);
+        }
+
+        .newsletter-form {
+            display: flex;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .newsletter-form input {
+            flex: 1;
+            padding: 15px 20px;
+            border: none;
+            border-radius: 30px 0 0 30px;
+            font-size: 1rem;
+            outline: none;
+        }
+
+        .newsletter-form button {
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            padding: 0 30px;
+            border-radius: 0 30px 30px 0;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .newsletter-form button:hover {
+            background-color: #006e43;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 60px 0 0;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-column h3 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: var(--secondary);
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background-color: var(--accent);
+        }
+
+        .footer-column p {
+            margin-bottom: 15px;
+            color: #bbb;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            color: #bbb;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--secondary);
+            padding-left: 5px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: #333;
+            color: white;
+            border-radius: 50%;
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            background-color: var(--primary);
+            transform: translateY(-5px);
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+        }
+
+        .contact-item i {
+            color: var(--secondary);
+            margin-right: 10px;
+            font-size: 1.2rem;
+        }
+
+        .copyright {
+            text-align: center;
+            padding: 20px 0;
+            border-top: 1px solid #333;
+            color: #bbb;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .hero h2 {
+                font-size: 2.8rem;
+            }
+            
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .about-image {
+                max-width: 500px;
+                margin: 0 auto;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+                padding: 15px 0;
+            }
+            
+            nav ul {
+                margin: 20px 0;
+            }
+            
+            nav ul li {
+                margin: 0 10px;
+            }
+            
+            .hero {
+                height: 70vh;
+            }
+            
+            .hero h2 {
+                font-size: 2.2rem;
+            }
+            
+            .newsletter-form {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .newsletter-form input,
+            .newsletter-form button {
+                width: 100%;
+                border-radius: 30px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero h2 {
+                font-size: 1.8rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .btn {
+                display: block;
+                margin: 10px auto;
+                width: 80%;
+            }
+            
+            .section-header h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="top-bar">
+            <div class="container top-bar-content">
+                <div class="contact">
+                    <i class="fas fa-phone"></i> +229 12 34 56 78
+                </div>
+                <div class="promo">
+                    Livraison gratuite à partir de 50.000 FCFA
+                </div>
+            </div>
+        </div>
+        
+        <div class="container nav-container">
+            <div class="logo">
+                <h1>Benin<span>Clothe</span>Society</h1>
+            </div>
+            
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">Accueil</a></li>
+                    <li><a href="#">Nouveautés</a></li>
+                    <li><a href="#">Femmes</a></li>
+                    <li><a href="#">Hommes</a></li>
+                    <li><a href="#">Enfants</a></li>
+                    <li><a href="#">Accessoires</a></li>
+                </ul>
+            </nav>
+            
+            <div class="icons">
+                <a href="#"><i class="fas fa-search"></i></a>
+                <a href="#"><i class="fas fa-user"></i></a>
+                <a href="#"><i class="fas fa-shopping-bag"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2>L'Élégance Africaine Réinventée</h2>
+            <p>Découvrez notre collection exclusive de vêtements inspirés de la riche culture béninoise, alliant tradition et modernité.</p>
+            <a href="#" class="btn">Collection Femmes</a>
+            <a href="#" class="btn btn-outline">Collection Hommes</a>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Nos Catégories</h2>
+                <p>Explorez nos différentes collections de vêtements et accessoires</p>
+            </div>
+            
+            <div class="categories">
+                <div class="category-card">
+                    <img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2073&q=80" alt="Femmes">
+                    <div class="category-info">
+                        <h3>Femmes</h3>
+                        <p>Collection Printemps-Été 2023</p>
+                    </div>
+                </div>
+                
+                <div class="category-card">
+                    <img src="https://images.unsplash.com/photo-1505022610485-0249ba5b3675?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Hommes">
+                    <div class="category-info">
+                        <h3>Hommes</h3>
+                        <p>Styles élégants et modernes</p>
+                    </div>
+                </div>
+                
+                <div class="category-card">
+                    <img src="https://images.unsplash.com/photo-1542818212-9899bafcb9db?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2052&q=80" alt="Enfants">
+                    <div class="category-info">
+                        <h3>Enfants</h3>
+                        <p>Confort et style pour les petits</p>
+                    </div>
+                </div>
+                
+                <div class="category-card">
+                    <img src="https://images.unsplash.com/photo-1591561954557-26941169b49e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80" alt="Accessoires">
+                    <div class="category-info">
+                        <h3>Accessoires</h3>
+                        <p>Complétez votre style</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="section" style="background-color: #f9f9f9;">
+        <div class="container">
+            <div class="section-header">
+                <h2>Nouveautés</h2>
+                <p>Découvrez nos dernières créations</p>
+            </div>
+            
+            <div class="products">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1525507119028-ed4c629a60a3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1935&q=80" alt="Robe traditionnelle">
+                        <span class="product-badge">Nouveau</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Robe en Wax "Cotonou"</h3>
+                        <div class="price">25.000 FCFA <span class="old-price">30.000 FCFA</span></div>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <a href="#" class="btn">Ajouter au panier</a>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1936&q=80" alt="Chemise homme">
+                        <span class="product-badge">Populaire</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Chemise "Abomey"</h3>
+                        <div class="price">18.000 FCFA</div>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <a href="#" class="btn">Ajouter au panier</a>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1582552938357-32b906df40cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1935&q=80" alt="Ensemble enfant">
+                    </div>
+                    <div class="product-info">
+                        <h3>Ensemble Enfant "Ganvié"</h3>
+                        <div class="price">15.000 FCFA</div>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <a href="#" class="btn">Ajouter au panier</a>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Sac à main">
+                        <span class="product-badge">Promo</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Sac "Ouidah" en raphia</h3>
+                        <div class="price">12.000 FCFA <span class="old-price">15.000 FCFA</span></div>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <a href="#" class="btn">Ajouter au panier</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80" alt="À propos de BeninClotheSociety">
+                </div>
+                <div class="about-text">
+                    <h2>Notre Histoire</h2>
+                    <p>BeninClotheSociety est née d'une passion pour la mode africaine et du désir de mettre en valeur la richesse culturelle du Bénin à travers des créations contemporaines.</p>
+                    <p>Fondée en 2018 à Cotonou, notre marque s'engage à promouvoir l'artisanat local tout en offrant des vêtements de qualité supérieure qui célèbrent notre héritage.</p>
+                    
+                    <div class="features">
+                        <div class="feature">
+                            <div class="feature-icon">
+                                <i class="fas fa-hands-helping"></i>
+                            </div>
+                            <div>
+                                <h4>Artisanat Local</h4>
+                                <p>Collaboration avec des artisans béninois</p>
+                            </div>
+                        </div>
+                        
+                        <div class="feature">
+                            <div class="feature-icon">
+                                <i class="fas fa-leaf"></i>
+                            </div>
+                            <div>
+                                <h4>Matériaux Durables</h4>
+                                <p>Utilisation de tissus écologiques et naturels</p>
+                            </div>
+                        </div>
+                        
+                        <div class="feature">
+                            <div class="feature-icon">
+                                <i class="fas fa-tshirt"></i>
+                            </div>
+                            <div>
+                                <h4>Qualité Supérieure</h4>
+                                <p>Confection minutieuse pour une durabilité exceptionnelle</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>Ce Que Disent Nos Clients</h2>
+                <p>Découvrez les témoignages de nos clients satisfaits</p>
+            </div>
+            
+            <div class="testimonial-container">
+                <div class="testimonial">
+                    <p>"Les vêtements de BeninClotheSociety sont d'une qualité exceptionnelle. J'adore les motifs uniques qui reflètent parfaitement notre culture béninoise. Le service client est également excellent!"</p>
+                    <div class="client">
+                        <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Client">
+                        <div class="client-info">
+                            <h4>Adidjatou Diallo</h4>
+                            <p>Cotonou</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial">
+                    <p>"J'ai commandé une chemise pour mon mari et il a reçu tellement de compliments! La livraison a été rapide et l'emballage très soigné. Je recommande vivement BeninClotheSociety!"</p>
+                    <div class="client">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Client">
+                        <div class="client-info">
+                            <h4>Fatou N'diaye</h4>
+                            <p>Porto-Novo</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Restez Connectés</h2>
+                <p>Inscrivez-vous à notre newsletter pour recevoir des offres exclusives et être informé de nos nouvelles collections</p>
+                
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Votre adresse email" required>
+                    <button type="submit">S'abonner</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>BeninClotheSociety</h3>
+                    <p>Votre destination pour des vêtements africains élégants qui célèbrent la riche culture béninoise.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Liens Rapides</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Accueil</a></li>
+                        <li><a href="#">À propos</a></li>
+                        <li><a href="#">Collections</a></li>
+                        <li><a href="#">Nouveautés</a></li>
+                        <li><a href="#">Promotions</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Catégories</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Femmes</a></li>
+                        <li><a href="#">Hommes</a></li>
+                        <li><a href="#">Enfants</a></li>
+                        <li><a href="#">Accessoires</a></li>
+                        <li><a href="#">Collections Spéciales</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Contactez-nous</h3>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <p>Rue 456, Quartier Dantokpa, Cotonou, Bénin</p>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <p>+229 12 34 56 78</p>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <p>contact@beninclothesociety.bj</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            <div class="container">
+                <p>&copy; 2023 BeninClotheSociety. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple JavaScript pour les éléments interactifs
+        document.addEventListener('DOMContentLoaded', function() {
+            // Animation d'ajout au panier
+            const addToCartButtons = document.querySelectorAll('.btn');
+            addToCartButtons.forEach(button => {
+                button.addEventListener('click', function(e) {
+                    if(this.textContent.includes('panier')) {
+                        e.preventDefault();
+                        const originalText = this.textContent;
+                        this.textContent = '✓ Ajouté !';
+                        
+                        setTimeout(() => {
+                            this.textContent = originalText;
+                        }, 2000);
+                    }
+                });
+            });
+            
+            // Soumission du formulaire de newsletter
+            const newsletterForm = document.querySelector('.newsletter-form');
+            if(newsletterForm) {
+                newsletterForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    const emailInput = this.querySelector('input[type="email"]');
+                    if(emailInput.value) {
+                        emailInput.value = '';
+                        alert('Merci pour votre abonnement à notre newsletter !');
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
