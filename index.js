@@ -18,7 +18,7 @@ app.register(fastifyView,{
     }
 })
 app.register(fastifyStatic, {
-    root:join(rootDir,'')
+    root:join(rootDir,'public')
 })
 app.register(fastifyFormbody)
 
@@ -32,7 +32,7 @@ app.addHook('preHandler', async (req, res) => {
 });
 
 app.get('/', async (req, res) => {
-  return res.send('Hello World!')
+  return res.redirect('index.html')
 })
 
 
