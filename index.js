@@ -31,9 +31,10 @@ app.addHook('preHandler', async (req, res) => {
   }
 });
 
-app.get('/',async (req, res)=>{
-    return res.redirect('index.html')
+app.get('/', async (req, res) => {
+    return res.sendFile('index.html')
 })
+
 
 app.setErrorHandler((error,req,res) => {
     if(error.message === "Cannot read properties of null (reading 'password')"){
