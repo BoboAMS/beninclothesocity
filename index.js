@@ -18,7 +18,7 @@ app.register(fastifyView,{
     }
 })
 app.register(fastifyStatic, {
-    root:join(rootDir,'public')
+    root:rootDir
 })
 app.register(fastifyFormbody)
 
