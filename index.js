@@ -32,7 +32,7 @@ app.addHook('preHandler', async (req, res) => {
 });
 
 app.get('/', async (req, res) => {
-    return res.sendFile('index.html')
+  return res.send('Hello World!')
 })
 
 
